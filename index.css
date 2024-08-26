@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
     background-color: #0f0f1a;
     color: #fff;
     overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
 }
 
 header {
@@ -344,6 +347,17 @@ h2 {
 
     .project-text {
         display: none;
+    }
+}
+
+/* For Smaller Screens */
+@media screen and (max-width: 425px) {
+    #project-info {
+        width: 160px;
+    }
+
+    .project-info-left {
+        transform: translateX(-180px);
     }
 }
 
