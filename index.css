@@ -285,6 +285,10 @@ h2 {
     animation: fadeIn 0.5s ease forwards;
 }
 
+.project-text {
+    animation: blink 2s infinite;
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
@@ -295,10 +299,6 @@ h2 {
     100% {
         opacity: 1;
     }
-}
-
-.project-text {
-    animation: blink 2s infinite;
 }
 
 /* Mobile styles */
@@ -340,6 +340,10 @@ h2 {
 
     .project-info-left {
         transform: translateX(-220px);
+    }
+
+    .project-text {
+        display: none;
     }
 }
 
