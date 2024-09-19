@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const projectsSection = document.getElementById('projects');
 
     const discordBotSkills = [
-        { name: "Python", level: "89%", icon: "fab fa-python" },
+        { name: "Python", level: "9%", icon: "fab fa-python" },
         { name: "Nextcord", level: "93%", icon: "fab fa-discord" },
         { name: "Time Management", level: "80%", icon: "fas fa-clock" },
         { name: "Database", level: "50%", icon: "fas fa-database" },
@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const gameDevProjects = [
         { name: "Metroll(Feat. Metic)", description: "2D PC pixel game, It was originally made for a game jam(3 days)", image: "https://img.itch.zone/aW1nLzE2ODMzNjU5LnBuZw==/315x250%23c/OxJ3aW.png", url: "https://salamony.itch.io/metroll" },
         { name: "Quest Odyssey(WIP)", description: "2D Pixel Platformer Game, Integrating Google Admob. \n My First Mobile Game.", image: "https://i.postimg.cc/ZKQkCwvR/header.gif", url: "#" },
-        { name: "Freedawn", description: "Action pixel top-down game, it was made in 7 days,", image: "/assets/freedawn.gif", url: "https://salamony.itch.io/freedawn" },
-        { name: "Feeless", description: "Eat viruses with a fluffy blood cell. \n Made To Support Rare Disease Patients", image: "/assets/virus.png", url: "https://salamony.itch.io/feeless" },
+        { name: "Freedawn", description: "Action pixel top-down game, it was made in 7 days,", image: "freedawn.gif", url: "https://salamony.itch.io/freedawn" },
+        { name: "Feeless", description: "Eat viruses with a fluffy blood cell. \n Made To Support Rare Disease Patients", image: "virus.png", url: "https://salamony.itch.io/feeless" },
         { name: "Wave Save", description: "Play as the enemy and prevent the player from winning.", image: "https://img.itch.zone/aW1nLzE2OTI0MTMyLnBuZw==/315x250%23c/ziHofI.png", url: "https://salamony.itch.io/wave-save" },
         { name: "LOST", description: "LOST is a platformer game with a size of ~3Mb. \n My First Game In LÖVE2D Library", image: "https://img.itch.zone/aW1nLzEyMzM3MjUyLmdpZg==/315x250%23cm/R%2BiX0H.gif", url: "https://salamony.itch.io/lost" },
     ];
