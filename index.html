@@ -22,12 +22,20 @@
         
         <section id="home" class="content">
             <h1>Ahmed Khalid.</h1>
-            <p>Discord Bot Developer & Game Developer</p>
+            <div class="ms-slider">
+                <!-- This last word needs to duplicate the first one to ensure a smooth infinite animation -->
+                <ul class="ms-slider__words">
+                  <li class="ms-slider__word"> Discord Bot Developer</li>
+                  <li class="ms-slider__word"> Game Developer</li>
+                  <li class="ms-slider__word"> Creative Coder</li>
+                  <li class="ms-slider__word"> Discord Bot Developer</li>
+                </ul>
+            </div>
         </section>
 
         <section id="about" class="content">
             <h2>About Me</h2>
-            <p>As a <b>Discord Bot Developer</b> and <b>Game Developer</b>, I've spent two years crafting <b>solo games</b> for fun. Beside developing Discord bots using the <b>NextCord</b> library. My ambition is to provide services to over <b>1000+ clients</b> with my bot creations and games.</p>
+            <p style="font-size: 1.5rem;">As a <b>Discord Bot Developer</b> and <b>Game Developer</b>, I've spent two years crafting <b>solo games</b> for fun. Beside developing Discord bots using the <b>NextCord</b> library. My ambition is to provide services to over <b>1000+ clients</b> with my bot creations and games.</p>
         </section>
 
         <section id="skills">
@@ -36,21 +44,18 @@
                 <button id="gameDevBtn" onclick="showGameDeveloperSkills()">Game Developer</button>
             </div>
             <h2>Skills</h2>
-            <div id="skills-text" class="skills-subtitle">(as a Discord Bot Developer)</div>
+            <div id="skills-text" class="skills-subtitle gradient">(as a Discord Bot Developer)</div>
         
             <div class="skills-section">
                 <!-- Skills will be updated dynamically -->
             </div>
         </section>      
 
-        <section id="projects" class="projects-section">
+        <section id="projects" class="section projects-section">
             <h2>Projects</h2>
-            <div class="timeline">
-                <!-- Projects will be dynamically added here -->
-            </div>
-
-            <h3 style="margin-top: 20%;" class="project-text"><i class="fas fa-circle"></i>‎ Hover To View</h3>
+            <!-- Projects will be dynamically added here -->
         </section>
+        
     </main>
 
     <footer>
@@ -67,174 +72,9 @@
         &copy; All Rights Reserved 2024
     </footer>
 
+</body>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        document.addEventListener('mousemove', (e) => {
-            const parallaxBg = document.querySelector('.parallax-bg');
-            const content = document.querySelector('.content');
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-            
-            const moveX = (mouseX / windowWidth - 0.5) * 20;
-            const moveY = (mouseY / windowHeight - 0.5) * 20;
-            
-            parallaxBg.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            content.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
-        });
-
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 100, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
-                size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 0 }, remove: { particles_nb: 2 } }
-            },
-            retina_detect: true
-        });
-
-        $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
-        
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-            } // End if
-        });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-        const discordBotBtn = document.getElementById('discordBotBtn');
-        const gameDevBtn = document.getElementById('gameDevBtn');
-        const skillsSection = document.querySelector('.skills-section');
-        const timeline = document.querySelector('.timeline');
-
-        const discordBotSkills = [
-            { name: "Python", level: "66%", icon: "fab fa-python" },
-            { name: "Nextcord", level: "93%", icon: "fab fa-discord" },
-            { name: "Time Management", level: "80%", icon: "fas fa-clock" },
-            { name: "Database", level: "50%", icon: "fas fa-database" },
-            { name: "Problem-Solving & Debugging", level: "89%", icon: "fas fa-bug" }
-        ];
-
-        const gameDevSkills = [
-            { name: "Godot", level: "90%", icon: "fas fa-cog" },
-            { name: "Programming(GDScript)", level: "89%", icon: "fas fa-code" },
-            { name: "Pixel Art", level: "75%", icon: "fas fa-paint-brush" },
-            { name: "Game Design", level: "85%", icon: "fas fa-gamepad" },
-            { name: "Sounds", level: "70%", icon: "fas fa-volume-up" }
-        ];
-
-        const discordBotProjects = [
-            { name: "DiceRoller", description: "A Dice Rolling Bot That Rolls Dice.", image: "https://cdn.discordapp.com/avatars/1187069692783898786/9d76ed2cc2aef07f50cfb837a27b16f9.png?size=512", url: "https://discord.bots.gg/bots/1187069692783898786"},
-            { name: "RPS Rumble", description: "A Bot Let You Play A Classic Rock Paper Scissors Round!", image:"https://cdn.discordapp.com/avatars/1187407521095368715/79b2b76facbbb2f4cfd8b095b0ed7415.png?size=512", url: "https://discord.bots.gg/bots/1187407521095368715"},
-            { name: "EmojiType", description: "A Bot That Converts Text To Emojis With Characters.", image:"https://cdn.discordapp.com/avatars/1263900166273105960/704ff40711d88348ea0a3abeff5ff208.png?size=512", url: "https://discord.bots.gg/bots/1263900166273105960"},
-            { name: "Mathter", description: "Calculator bot that.... calculates. DUH", image:"https://cdn.discordapp.com/avatars/1266844297173405850/eca2fe39f18dc572b0630abc165ae2b8.png?size=512", url: "https://discord.bots.gg/bots/1266844297173405850"},
-            { name: "Memerator", description: "A Bot That Summon a random meme!", image:"https://cdn.discordapp.com/avatars/1267201343060447262/4e8cfa73ce859ff2db307fb782eda9d6.png?size=512", url: "https://discord.bots.gg/bots/1267201343060447262"},
-        ];
-
-        const gameDevProjects = [
-            { name: "LOST", description: "A boy LOST in another dimension, Try To Escape. \n My First Game In LOVE2D", image: "https://img.itch.zone/aW1nLzEyMzM3MjUyLmdpZg==/315x250%23cm/R%2BiX0H.gif", url: "#" },
-            { name: "Freedawn", description: "Protect Yourself From These Guys!", image: "https://img.itch.zone/aW1nLzEyNTkxNTM0LnBuZw==/315x250%23c/D8LPr%2B.png", url: "#" },
-            { name: "Wave Save", description: "Play as the enemy and prevent the player from winning.", image: "https://img.itch.zone/aW1nLzE2OTI0MTMyLnBuZw==/315x250%23c/ziHofI.png", url: "#" },
-            { name: "Metroll", description: "Try To Avoid Being Trolled.", image: "https://img.itch.zone/aW1nLzE2ODMzNjU5LnBuZw==/315x250%23c/OxJ3aW.png", url: "#" },
-            { name: "Feeless", description: "Eat viruses with a fluffy blood cell. \n Made To Support Rare Disease Patients", image: "https://img.itch.zone/aW1nLzE2MzY4MzczLmpwZWc=/315x250%23c/LvrbrO.jpeg", url: "#" },
-            { name: "OH, DRONE!!", description: "Instead Of Helping Humans, KILL EM! \n My First 3D Game.", image: "https://img.itch.zone/aW1nLzEzOTM3MTYzLnBuZw==/315x250%23c/ZKa2Pp.png", url: "#" },
-        ];
-
-        function updateSkills(skills) {
-            skillsSection.innerHTML = '';
-            skills.forEach(skill => {
-                const skillElement = document.createElement('div');
-                skillElement.className = 'skill';
-                skillElement.innerHTML = `
-                    <div class="skill-name"><div class="skill-icon"><i class="${skill.icon}"></i></div>${skill.name}</div>
-                    <div class="progress-bar"><div class="progress" style="width: ${skill.level};"></div></div>
-                `;
-                skillsSection.appendChild(skillElement);
-            });
-        }
-
-        function updateProjects(projects) {
-            timeline.innerHTML = '';
-            projects.forEach((project, index) => {
-                const projectElement = document.createElement('a');
-                projectElement.href = project.url;
-                projectElement.target = "_blank";
-                projectElement.className = `project`;
-                
-                const position = index === 0 ? 0 : index === projects.length - 1 ? 100 : (index / (projects.length - 1)) * 100;
-                projectElement.style.left = `calc(${position}% - 10px)`; // Center the marker
-                projectElement.style.animationDelay = `${index * 0.1}s`;
-                
-                const projectInfo = document.createElement('div');
-                projectInfo.id = 'project-info';
-                projectInfo.className = `project-info-${index % 2 === 0 ? 'right' : 'left'}`;
-                projectInfo.innerHTML = `<img src="${project.image}" width="40%" height="20%" style="border-radius: 10px;"><h3>${project.name}</h3><p>${project.description}</p>`;
-                
-                projectElement.appendChild(projectInfo);
-                timeline.appendChild(projectElement);
-            });
-        }
-
-        discordBotBtn.addEventListener('click', function () {
-            updateSkills(discordBotSkills);
-            updateProjects(discordBotProjects);
-        });
-
-        gameDevBtn.addEventListener('click', function () {
-            updateSkills(gameDevSkills);
-            updateProjects(gameDevProjects);
-        });
-
-        // Initialize with Discord Bot Developer content
-        updateSkills(discordBotSkills);
-        updateProjects(discordBotProjects);
-    });
-    
-        function showBotDeveloperSkills() {
-            document.getElementById('skills-text').innerText = '(as a Discord Bot Developer)';
-        }
-
-        function showGameDeveloperSkills() {
-            document.getElementById('skills-text').innerText = '(as a Game Developer)';
-        }
-
-        var docWidth = document.documentElement.offsetWidth;
-        [].forEach.call(
-        document.querySelectorAll('*'),
-        function(el) {
-            if (el.offsetWidth > docWidth) {
-            console.log(el);
-            }
-        }
-        );
-    </script>
-</body>
+    <script src="index.js"></script>
 </html>
