@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     const discordBotProjects = [
-        { name: "SquadSeek", description: "A Bot to connect with players, find teammates, and discover your gaming buddy.", image: "assets/squadseek.png", url: "https://discord.bots.gg/bots/1279165316311810080"},
+        { name: "SquadSeek", description: "Connect with players, find teammates, and discover your gaming buddy.", image: "assets/squadseek.png", url: "https://discord.bots.gg/bots/1279165316311810080"},
         { name: "Memerator", description: "Summon a meme post from reddit by using a simple command.", image:"assets/meme.jpg", url: "https://discord.bots.gg/bots/1267201343060447262"},
-        { name: "Mathter", description: "A Bot that can calculate your math equations, convert units and creates a math problem.", image:"assets/mathcalc.png", url: "https://discord.bots.gg/bots/1266844297173405850"},
+        { name: "Mathter", description: "Calculate your math equations, convert units and creates a math problem.", image:"assets/mathcalc.png", url: "https://discord.bots.gg/bots/1266844297173405850"},
         { name: "RPS Rumble", description: "A Bot Let You Play A Classic Rock Paper Scissors Round!", image:"assets/rpsChoice.png", url: "https://discord.bots.gg/bots/1187407521095368715"},
         { name: "EmojiType", description: "A Bot That Converts Text To Emojis With Characters.", image:"assets/emoji.png", url: "https://discord.bots.gg/bots/1263900166273105960"},
         { name: "DiceRoller", description: "A Dice Rolling Bot That Rolls Dice.", image: "assets/rollDice.jpg", url: "https://discord.bots.gg/bots/1187069692783898786"},
